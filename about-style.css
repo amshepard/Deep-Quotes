@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 25% 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
   }
   
@@ -9,10 +9,9 @@
     width: 100%;
     height: auto;
     margin: auto;
+    object-fit: cover;
   }
   
-  
-
   body {
     background-color: black;
   }
@@ -20,7 +19,6 @@
   .header-content {
     padding-bottom: 6rem;
   }
-  
   
   h1, p {
     color: #ffff00;
