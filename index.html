@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Deep Quotes for Shallow Pics</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Bangers&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+    <h2>Deep Quotes for Shallow Pics</h2>
+    <a href="about.html" class="about-link">About</a>
+
+<div class="box">
+        <div class="innerBox">
+    <div id="quotes"></div>
+    <div id="author"></div>
+    <button id ="newQuote">May I Please Have Another?</button>
+</div>
+     <!-- <img src="elon-musk.gif" alt="A gif of Jerry Lawler laughing with text that reads Elon Musk: Buys Twitter for $41b. Me: who downloaded if for free from the App Store" id="elonsky" >  -->
+   
+</div>
+
+    <div id="randomStrings">
+      <ul id="stringList"></ul>
+    </div>
+  </div>
+
+  <style>
+    #stringList {
+      text-align: center;
+    }
+    </style>
     
+    <div id="stringList"></div>
+    
+    <script>
+    const randomStrings = document.getElementById('stringList');
+    const stringArray = ["Selfies 🤳", "Usies 👯‍♀️", "Puddle Pics 💧", "Gym Pics 💪", "Landscape Pics 🌅", "Pet Pics 🦮", "Nighttime Pics 🌙", "Fit Pics 👔", "Morning Coffe Pics ☕️", "Lunch Pics 🍽", "Dinner Pics 🍱", "Girls Night Out Pics 👯‍♀️", "Brunch Pics 🍜", "Cat Pics 😻", "Dog Pics 🐶", "Family Pics 👨‍👩‍👦‍👦", "Random Pics ❓", "New Haircut Pics 💇‍♀️", "Rainy Day Pics ☔️", "Sunny Day Pics 😎", "Beach Pics 🏖", "Hiking Pics 🥾", "Introspective Pics 💬", "TBT Pics 🎥",];
+    
+    function displayRandomStrings() {
+      randomStrings.innerHTML = '';
+      const randomNumber = Math.floor(Math.random() * stringArray.length);
+      const randomString = stringArray[randomNumber];
+      const prefix = document.createElement('h2');
+      prefix.innerText = "This quote pairs well with:";
+      randomStrings.appendChild(prefix);
+      const listItem = document.createElement('li');
+      listItem.innerText = randomString;
+      randomStrings.appendChild(listItem);
+    }
+    
+    displayRandomStrings();
+    </script>
+
+  <style>
+    #stringList {
+      list-style: none;
+    }
+  </style>
+
+
 </body>
+</html>
+
+
+
+</body>
+
 </html>
