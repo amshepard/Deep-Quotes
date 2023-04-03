@@ -42,19 +42,36 @@
     
     <script>
     const randomStrings = document.getElementById('stringList');
+    // Assigned the value of element id stringList.
+
     const stringArray = ["Selfies 🤳", "Usies 👯‍♀️", "Puddle Pics 💧", "Gym Pics 💪", "Landscape Pics 🌅", "Pet Pics 🦮", "Nighttime Pics 🌙", "Fit Pics 👔", "Morning Coffe Pics ☕️", "Lunch Pics 🍽", "Dinner Pics 🍱", "Girls Night Out Pics 👯‍♀️", "Brunch Pics 🍜", "Cat Pics 😻", "Dog Pics 🐶", "Family Pics 👨‍👩‍👦‍👦", "Random Pics ❓", "New Haircut Pics 💇‍♀️", "Rainy Day Pics ☔️", "Sunny Day Pics 😎", "Beach Pics 🏖", "Hiking Pics 🥾", "Introspective Pics 💬", "TBT Pics 🎥",];
-    
+    /* Define the variable randomStrings*/
+
     function displayRandomStrings() {
+      // Define the function named displayRandomStrings
+
       randomStrings.innerHTML = '';
+      // Set the innerHTML of randomStrings element to an empty string
+
       const randomNumber = Math.floor(Math.random() * stringArray.length);
+      // Generate a random number between 0 and the length of stringArray, then round it down to an integer
+
       const randomString = stringArray[randomNumber];
+       // Select a random string from stringArray using the randomNumber as an index
+
       const prefix = document.createElement('h2');
       prefix.innerText = "This quote pairs well with:";
+      // Create a new h2 element and set its innerText to "This quote pairs well with:"
+
       randomStrings.appendChild(prefix);
+      // Append the h2 element as a child of the randomStrings element
+      
       const listItem = document.createElement('li');
       listItem.innerText = randomString;
+       // Create a new li element and set its innerText to the randomly selected string
+
       randomStrings.appendChild(listItem);
-    }
+    } // Append the li element as a child of the randomStrings element
     
     displayRandomStrings();
     </script>
