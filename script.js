@@ -40,6 +40,12 @@ const fetchQuote = async () => {
     // fetch data from the URL assigned to 'api'
     realdata = await data.json();
     // convert data to JSON format and assign to 'realdata'
+    
+    console.log(realdata);//please show me something 😭
+    console.log(realdata.length);
+    console.log(realdata.content);
+    console.log(realdata.author);
+
 
     quotes.innerText = `${realdata.content} `;
     // set the value of 'quotes' element to the 'content' field of 'realdata'
