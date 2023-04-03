@@ -47,7 +47,7 @@ h2{
     width: 65vw;
     border: solid red;
     border-radius: 5rem;
-    background-image: url('twitter_dead3.webp');
+    background-image: url('assets/twitdead.webp');
     background-repeat: repeat;
     background-size: 20%;
     transition: height 0.5s ease-in-out;
