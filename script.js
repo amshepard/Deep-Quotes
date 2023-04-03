@@ -54,6 +54,8 @@ const fetchQuote = async () => {
     // set the value of 'quotes' element to the 'content' field of 'realdata'
     author.innerHTML = `- ${realdata.author}`;
     // set the value of 'author' element to the 'author' field of 'realdata'
+    displayRandomStrings();
+    // display a new random string each time fetchQuote runs.
   } catch (error) {
     // if an error occurs, do nothing
 
