@@ -1,7 +1,7 @@
 const quotes = document.getElementById('quotes');
 const author = document.getElementById('author');
-const newq = document.getElementById('newQuote');
-const tweetme = document.getElementById('twitter');
+const newQuote = document.getElementById('newQuote');
+const postTweet = document.getElementById('twitter');
 
 let realdata = "";
 
@@ -18,7 +18,7 @@ const tweet = () => {
 };
 
 const fetchQuote = async () => {
-  const api = "<https://api.quotable.io/random>";
+  const api = `https://api.quotable.io/random`;
   try {
     let data = await fetch(api);
     realdata = await data.json();
@@ -30,7 +30,7 @@ const fetchQuote = async () => {
   }
 };
 
-newq.addEventListener("click", fetchQuote);
-tweetme.addEventListener("click", tweet);
+newQuote.addEventListener("click", fetchQuote);
+postTweet.addEventListener("click", tweet);
 
 fetchQuote();
