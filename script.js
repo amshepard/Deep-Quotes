@@ -6,12 +6,15 @@ const author = document.getElementById('author');
 
 const newQuote = document.getElementById('newQuote');
 // get element by ID 'newQuote'
+console.log(newQuote)
 
 const postTweet = document.getElementById('twitter');
 // get element by ID 'twitter'
 
 let realdata = "";
 // initialize the empty variable 'realdata'
+
+// console.log(fetchQuote)
 
 const tweet = () => {
   let tweets = `https://twitter.com/intent/tweet?text=${quotes.innerText}`;
